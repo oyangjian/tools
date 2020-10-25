@@ -32,3 +32,13 @@ yes | yum install unzip
 # disable selinux
 setenforce 0
 sed -i 's/^SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
+
+yes | yum install nodejs
+npm install -g web3
+npm install -g tronweb
+
+#export NODE_PATH=/usr/local/lib/node_modules
+if [ ! `grep '^NODE_PATH=' /home/yang/.bashrc` ];then
+	echo 'export NODE_PATH=/usr/local/lib/node_modules' >>/home/yang/.bashrc
+	source /home/yang/.bashrc
+fi
