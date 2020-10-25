@@ -8,6 +8,8 @@
 # sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config;
 # systemctl restart sshd
 
+# hostnamectl --static set-hostname bcweb.tw
+
 yes | yum update
 yes | yum install httpd
 #systemctl restart httpd
