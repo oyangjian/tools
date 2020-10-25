@@ -40,7 +40,7 @@ npm install -g web3
 npm install -g tronweb
 
 #export NODE_PATH=/usr/local/lib/node_modules
-if [ ! `grep '^NODE_PATH=' /home/yang/.bashrc` ];then
+if ! grep -q '^export NODE_PATH=/usr/local/lib/node_modules' /home/yang/.bashrc ; then
 	echo 'export NODE_PATH=/usr/local/lib/node_modules' >>/home/yang/.bashrc
 	source /home/yang/.bashrc
 fi
