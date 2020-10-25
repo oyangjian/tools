@@ -9,11 +9,11 @@
 # systemctl restart sshd
 
 yes | yum update
-#yes | yum install httpd
+yes | yum install httpd
 #systemctl restart httpd
 yes | yum install nginx
 systemctl restart nginx
-#systemctl enable nginx
+systemctl enable nginx
 
 if [ ! -f /var/www/html/index.html ];then
 	echo "install black index.html"
