@@ -44,3 +44,5 @@ if ! grep -q '^export NODE_PATH=/usr/local/lib/node_modules' /home/yang/.bashrc 
 	echo 'export NODE_PATH=/usr/local/lib/node_modules' >>/home/yang/.bashrc
 	source /home/yang/.bashrc
 fi
+
+alternatives --set python /usr/bin/python3
