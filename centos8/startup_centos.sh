@@ -46,3 +46,13 @@ if ! grep -q '^export NODE_PATH=/usr/local/lib/node_modules' /home/yang/.bashrc 
 fi
 
 alternatives --set python /usr/bin/python3
+
+# install epel-release
+dnf install epel-release -y
+#dnf install snapd -y
+#systemctl enable --now snapd.socket
+#systemctl start snapd
+#snap install shadowsocks-libev
+
+# add chmod
+chmod +rx /var/log/nginx
