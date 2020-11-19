@@ -5,8 +5,22 @@
 # /etc/ssh/sshd_config
 # change to:
 # PasswordAuthentication yes
-# sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config;
-# systemctl restart sshd
+sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+systemctl restart sshd
+
+# create user
+adduser yang
+passwd='123456'
+if [ "$1" != "" ];then
+    passwd=$1
+fi
+echo  "set yang pass [$passwd]"
+echo -e "$passwd\n$passwd" | passwd yang
+grep '^yang' /etc/sudoers
+if [ "$?" != 0 ];then
+    # add sudo users.
+    sed -i "/^root/a yang ALL=(ALL) ALL" /etc/sudoers
+fi
 
 # hostnamectl --static set-hostname bcweb.tw
 
