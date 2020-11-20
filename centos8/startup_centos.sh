@@ -44,6 +44,7 @@ fi
 
 yes | yum install git
 yes | yum install unzip
+yes | yum install libconfig
 
 # disable selinux
 setenforce 0
