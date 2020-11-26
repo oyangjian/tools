@@ -53,6 +53,7 @@ sed -i 's/^SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
 yes | yum install nodejs
 npm install -g web3
 npm install -g tronweb
+npm install -g yarn
 
 #export NODE_PATH=/usr/local/lib/node_modules
 if ! grep -q '^export NODE_PATH=/usr/local/lib/node_modules' /home/yang/.bashrc ; then
