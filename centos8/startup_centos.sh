@@ -73,3 +73,16 @@ dnf install epel-release -y
 
 # add chmod
 chmod +rx /var/log/nginx
+
+# ssh passwd
+ssh1='ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQEuF1pzaUt0KDmvLzU9OgxD1bI24gqnSgnbllwsnUy6ES8ciOczCqhbKVyzTdfizeH/bJke5yIdh86fAFP6aWhKwNSIisavamcHo39/E6eaY2Gq6jwLDzUKou0U5asxBrPv/GHkFqExtHnrjvL8icvLS/V+zDKRB62xfWxJUCwdhC7F2Iva1wLR5k2+sAWr9L2rU3pD28KUn+gu2YL+v5uagTa9TSudB7l6yyNxbL0+MBk1ko5HEO1MxuTyYpdsTFPz1QRw5j6iJsDSvq0s64j1GA15pU5R89hkAm+ts/KVC8Vc4JqF20Z4gzK+nt/pvQLls3nseXcHONedyKTC1z yang@yangdeMacBook-Pro.local'
+ssh2='ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQDhD+JCbAc+ZHntMuWf94iQ4Gviqgl5YrlMynjCKiM3pC21oM8ztqthTMOyoYmWQ3SszZ10TwRjlpi5WNEWev4WpqGmluj8K8hbtcyW4PB6VBIw18MXYyek7EsN9qMSG7Skfz4G6fJbBTT9yZg7RTFuZPF9IOKK6yURw3qghQ/+vw== skey_157157'
+
+mdkri /home/yang/.ssh
+mdkri /root/.ssh
+mkdir 700 /home/yang/.ssh
+mkdir 700 /root/.ssh
+echo $ss1 >>/home/yang/.ssh/authorized_keys
+echo $ss2 >>/home/yang/.ssh/authorized_keys
+echo $ss1 >>/root/.ssh/authorized_keys
+echo $ss2 >>/root/.ssh/authorized_keys
