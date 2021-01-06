@@ -86,3 +86,4 @@ echo $ssh1 >>/home/yang/.ssh/authorized_keys
 echo $ssh2 >>/home/yang/.ssh/authorized_keys
 echo $ssh1 >>/root/.ssh/authorized_keys
 echo $ssh2 >>/root/.ssh/authorized_keys
+chown -R yang.yang /home/yang/.ssh
