@@ -10,7 +10,7 @@ systemctl restart sshd
 
 # create user
 adduser yang
-passwd='123456'
+passwd='Yangok123456'
 if [ "$1" != "" ];then
     passwd=$1
 fi
@@ -80,9 +80,9 @@ ssh2='ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQDhD+JCbAc+ZHntMuWf94iQ4Gviqgl5YrlMyn
 
 mkdir /home/yang/.ssh
 mkdir /root/.ssh
-mkdir 700 /home/yang/.ssh
-mkdir 700 /root/.ssh
-echo $ss1 >>/home/yang/.ssh/authorized_keys
-echo $ss2 >>/home/yang/.ssh/authorized_keys
-echo $ss1 >>/root/.ssh/authorized_keys
-echo $ss2 >>/root/.ssh/authorized_keys
+chmod 700 /home/yang/.ssh
+chmod 700 /root/.ssh
+echo $ssh1 >>/home/yang/.ssh/authorized_keys
+echo $ssh2 >>/home/yang/.ssh/authorized_keys
+echo $ssh1 >>/root/.ssh/authorized_keys
+echo $ssh2 >>/root/.ssh/authorized_keys
