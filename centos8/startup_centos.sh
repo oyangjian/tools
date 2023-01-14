@@ -45,6 +45,8 @@ fi
 yes | yum install git
 yes | yum install unzip
 yes | yum install libconfig
+yes | yum install jq
+yes | yum install npm
 
 # disable selinux
 setenforce 0
@@ -61,6 +63,11 @@ npm install -g bs58
 npm install -g tronweb
 npm install -g deasync
 npm install -g cross-fetch
+npm install -g https-proxy-agent
+npm install -g rpc-websockets
+npm install -g socks-proxy-agent
+npm install -g @solana/spl-token
+npm install -g aptos
 
 #export NODE_PATH=/usr/local/lib/node_modules
 if ! grep -q '^export NODE_PATH=/usr/local/lib/node_modules' /home/yang/.bashrc ; then
